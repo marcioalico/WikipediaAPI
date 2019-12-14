@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="API" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uc6-ml-9UY">
+                                <rect key="frame" x="89" y="221" width="236" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="EJN-2I-xA5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Buscar en Wikipedia"/>
+                                <connections>
+                                    <action selector="btnDoSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qTY-xb-VKf"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5ze-1d-999">
+                                <rect key="frame" x="89" y="179" width="236" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <wkWebView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="56u-rI-0Na">
+                                <rect key="frame" x="52" y="259" width="311" height="587"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="587" id="JLA-nS-WOF"/>
+                                    <constraint firstAttribute="width" constant="311" id="eqb-BX-uWA"/>
+                                </constraints>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5ze-1d-999" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="45f-nV-Unv"/>
+                            <constraint firstItem="Uc6-ml-9UY" firstAttribute="top" secondItem="5ze-1d-999" secondAttribute="bottom" constant="8" id="6Jn-KJ-ffh"/>
+                            <constraint firstItem="56u-rI-0Na" firstAttribute="top" secondItem="Uc6-ml-9UY" secondAttribute="bottom" constant="8" id="8I9-9c-ZMO"/>
+                            <constraint firstItem="56u-rI-0Na" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="99.5" id="UsR-FO-wgV"/>
+                            <constraint firstItem="Uc6-ml-9UY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="177" id="X9c-0J-0mC"/>
+                            <constraint firstItem="Uc6-ml-9UY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ba7-ao-wrR"/>
+                            <constraint firstItem="56u-rI-0Na" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hnW-4N-g4X"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="56u-rI-0Na" secondAttribute="bottom" constant="16" id="pvN-f1-XEg"/>
+                            <constraint firstItem="56u-rI-0Na" firstAttribute="top" secondItem="Uc6-ml-9UY" secondAttribute="bottom" constant="8" id="wOh-i5-hn4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="textSearch" destination="5ze-1d-999" id="pjg-y9-kv2"/>
+                        <outlet property="webView" destination="56u-rI-0Na" id="jrx-lx-biz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="101.78571428571428"/>
+        </scene>
+    </scenes>
+</document>
